@@ -1,5 +1,7 @@
+import { Category } from "../models/category";
+
 // Initialize categories array to save data in memory
-const categories = [];
+const categories : Array<Category> = [];
 
 export const getCategory = (id: string) => {
   return categories.find((p) => p.id === id);
@@ -8,7 +10,7 @@ export const getCategory = (id: string) => {
 // Get all categories
 const getCategories = (req, res) => {
   // Return all the categories with a 200 status code
-  res.status(200).json(categories);
+  res.status(200).json(categories); 
 };
 
 // Get category by id
